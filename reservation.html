@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reservations</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        max-width: 13200px;
+        background-image: url("ai1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .nav {
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        margin: 0 auto;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      .nav-link {
+        display: inline-block;
+        padding: 40px 25px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .nav-link:hover {
+        color: #eafa06;
+        background: #0a060070;
+      }
+
+      .logo {
+        display: block;
+        margin: 20px auto;
+        text-align: left;
+      }
+
+      .footer {
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: 2px;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .reservation {
+        padding: 20px;
+        margin: 70px auto;
+        max-width: 800px;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #fff;
+        border-radius: 60px;
+        text-align: center;
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body text="white">
+    <header>
+      <a href="index.html" class="logo">
+        <img src="logowhite.png" alt="logo" width="250" height="150" />
+      </a>
+      <div class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="reservation.html" class="nav-link">Reservations</a>
+      </div>
+    </header>
+    <div class="reservation">
+      <h1>Reservations</h1>
+      <h2>
+        To reserve your seats at NKS Liquors in Durbarmarg, Kathmandu, simply
+        fill out the form provided on our reservations page. Enter your name,
+        email address, phone number, and any additional message you'd like to
+        include. Select your desired date from the calendar and click "Submit"
+        to confirm your reservation. We look forward to welcoming you to NKS
+        Liquors for an exceptional experience in Kathmandu.
+      </h2>
+      <form action="/action.php" name="myform" class="form-input" onsubmit="return validateform()" method="post">   
+        <table border="3" align="center" cellpadding="10" cellspacing="8" width="550" height="350">
+           <tr align="center">
+            <th>Enter your Name</th>
+            <td><input type="text" placeholder="Your name" size="40" name="your_name" ></td>
+           </tr>
+           <tr align="center">
+            <th>Enter your Phone number</th>
+            <td><input type="text" name="your_phoneno." placeholder="Your Phone number" size="40" maxlength="10"></td>
+           </tr>
+           <tr align="center">
+            <th>Enter your Email Address</th>
+            <td><input type="email" placeholder="Your Email Address" size="40" name="your_email"></td>
+           </tr>
+           <tr align="center">
+            <th>Enter your message</th>
+            <td><textarea name="message"cols="40" placeholder="Your message" rows="10"></textarea></td>
+           </tr>
+           <tr align="center">
+            <th>Prefered Contact Method</th>
+            <td><select name="contact"><option value="C1">Email<option value="C2" name="your_method">Phone No.</td>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <td><input type="date"></td>
+        </tr>
+        </table>
+        <br>
+        <center>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        </center>
+        </form>   
+      </div>
+    <footer class="footer">
+      <p>&copy; 2024. NKS Liquors | Address: Durbarmarg, Kathmandu</p>
+    </footer>
+    <script>
+      function validateform(){
+          let x=document.forms["myform"]["your_name"].value;
+          if (x==""){
+              alert("Please fill out your name");
+              return false;
+          }
+          let y=document.forms["myform"]["your_phoneno."].value;
+          if (y==""){
+              alert("Please fill out your phone number");
+              return false;
+          }
+          let z=document.forms["myform"]["your_email"].value;
+          if (z==""){
+              alert("Please fill out your email section");
+              return false;
+          }
+          let a=document.forms["myform"]["message"].value;
+          if (a==""){
+              alert("Please write your query");
+              return false;
+          }
+      
+      } 
+  </script> 
+  </body>
+</html>

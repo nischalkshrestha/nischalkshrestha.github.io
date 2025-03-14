@@ -6,18 +6,13 @@
       body {
         font-family: "Times New Roman", Times, serif;
         font-size: 14px;
-        margin: 0;
-        padding: 0;
         max-width: 13200px;
         background-image: url("ai1.jpg");
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
       }
       .nav {
         text-align: center;
         background: rgba(0, 0, 0, 0);
-        margin: 0 auto;
         width: 100%;
         position: absolute;
         top: 0;
@@ -64,6 +59,41 @@
         color: #fff;
       }
 
+      /* Add this CSS for the transparent table */
+      .transparent-table {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .transparent-table th,
+      .transparent-table td {
+        background-color: transparent;
+        border: 2px solid #fff;
+        padding: 10px;
+        color: #fff;
+      }
+
+      .transparent-table input,
+      .transparent-table textarea,
+      .transparent-table select {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 5px;
+        width: 100%;
+      }
+
+      .transparent-table input::placeholder,
+      .transparent-table textarea::placeholder {
+        color: #ccc;
+      }
+
+      /* Add this CSS to make the date input smaller */
+      .transparent-table input[type="date"] {
+        width: 50%; /* Adjust the width as needed */
+      }
     </style>
   </head>
   <body text="white">
@@ -91,67 +121,77 @@
         to confirm your reservation. We look forward to welcoming you to NKS
         Liquors for an exceptional experience in Kathmandu.
       </h2>
-      <form action="/action.php" name="myform" class="form-input" onsubmit="return validateform()" method="post">   
-        <table border="3" align="center" cellpadding="10" cellspacing="8" width="550" height="350">
-           <tr align="center">
+      <form
+        action="/action.php"
+        name="myform"
+        class="form-input"
+        onsubmit="return validateform()"
+        method="post"
+      >
+        <table class="transparent-table" align="center" cellpadding="10" cellspacing="8" width="550" height="350">
+          <tr align="center">
             <th>Enter your Name</th>
-            <td><input type="text" placeholder="Your name" size="40" name="your_name" ></td>
-           </tr>
-           <tr align="center">
+            <td><input type="text" placeholder="Your name" size="40" name="your_name" /></td>
+          </tr>
+          <tr align="center">
             <th>Enter your Phone number</th>
-            <td><input type="text" name="your_phoneno." placeholder="Your Phone number" size="40" maxlength="10"></td>
-           </tr>
-           <tr align="center">
+            <td><input type="text" name="your_phoneno." placeholder="Your Phone number" size="40" maxlength="10" /></td>
+          </tr>
+          <tr align="center">
             <th>Enter your Email Address</th>
-            <td><input type="email" placeholder="Your Email Address" size="40" name="your_email"></td>
-           </tr>
-           <tr align="center">
+            <td><input type="email" placeholder="Your Email Address" size="40" name="your_email" /></td>
+          </tr>
+          <tr align="center">
             <th>Enter your message</th>
-            <td><textarea name="message"cols="40" placeholder="Your message" rows="10"></textarea></td>
-           </tr>
-           <tr align="center">
+            <td><textarea name="message" cols="40" placeholder="Your message" rows="10"></textarea></td>
+          </tr>
+          <tr align="center">
             <th>Prefered Contact Method</th>
-            <td><select name="contact"><option value="C1">Email<option value="C2" name="your_method">Phone No.</td>
-        </tr>
-        <tr>
-          <th>Date</th>
-          <td><input type="date"></td>
-        </tr>
+            <td>
+              <select name="contact">
+                <option value="C1">Email</option>
+                <option value="C2" name="your_method">Phone No.</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <td><input type="date" /></td>
+          </tr>
         </table>
-        <br>
+        <br />
         <center>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
         </center>
-        </form>   
-      </div>
+      </form>
+    </div>
     <footer class="footer">
       <p>&copy; 2024. NKS Liquors | Address: Durbarmarg, Kathmandu</p>
     </footer>
     <script>
-      function validateform(){
-          let x=document.forms["myform"]["your_name"].value;
-          if (x==""){
-              alert("Please fill out your name");
-              return false;
-          }
-          let y=document.forms["myform"]["your_phoneno."].value;
-          if (y==""){
-              alert("Please fill out your phone number");
-              return false;
-          }
-          let z=document.forms["myform"]["your_email"].value;
-          if (z==""){
-              alert("Please fill out your email section");
-              return false;
-          }
-          let a=document.forms["myform"]["message"].value;
-          if (a==""){
-              alert("Please write your query");
-              return false;
-          }
-      
-      } 
-  </script> 
+      function validateform() {
+        let x = document.forms["myform"]["your_name"].value;
+        if (x == "") {
+          alert("Please fill out your name");
+          return false;
+        }
+        let y = document.forms["myform"]["your_phoneno."].value;
+        if (y == "") {
+          alert("Please fill out your phone number");
+          return false;
+        }
+        let z = document.forms["myform"]["your_email"].value;
+        if (z == "") {
+          alert("Please fill out your email section");
+          return false;
+        }
+        let a = document.forms["myform"]["message"].value;
+        if (a == "") {
+          alert("Please write your query");
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>

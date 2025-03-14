@@ -2,23 +2,21 @@
 <html lang="en">
   <head>
     <title>Portfolio</title>
-  </head>
-  <style>
-    body {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-      max-width: 13200px;
-      background-image: url("l14.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    .nav {
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14px;
+        max-width: 13200px;
+        background-image: url("l14.jpg");
+        background-size: cover;
+        margin: 0; /* Remove default body margin */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+      }
+      .nav {
         text-align: center;
         background: rgba(0, 0, 0, 0);
-        margin: 0 auto;
         width: 100%;
         position: absolute;
         top: 0;
@@ -37,38 +35,45 @@
         background: #0a060070;
       }
 
-    .logo {
-      display: block;
-      margin: 20px auto;
-      text-align: left;
-    }
+      .logo {
+        display: block;
+        margin: 20px auto;
+        text-align: left;
+      }
 
-    .box {
-      padding: 40px;
-      margin: 10px auto;
-      max-width: 700px;
-      background: rgba(0, 0, 0, 0.7); 
-      border: 3px solid #ffffff;
-      border-radius: 60px;
-      text-align: center;
-      color: #fff;
-    }
+      .box {
+        padding: 40px;
+        margin: 10px auto;
+        max-width: 700px;
+        background: rgba(0, 0, 0, 0.7);
+        border: 3px solid #ffffff;
+        border-radius: 60px;
+        text-align: center;
+        color: #fff;
+        flex: 1; /* Allow the box to grow and push the footer to the bottom */
+      }
 
-    a:link{color:rgb(52, 222, 252);} /*Unvisited Link*/
-    a:visited{color:rgb(52, 222, 252)}  /*Visited Link*/
-    a:hover{color:yellow} /*Mouse over Link*/
+      a:link {
+        color: rgb(52, 222, 252);
+      } /*Unvisited Link*/
+      a:visited {
+        color: rgb(52, 222, 252);
+      } /*Visited Link*/
+      a:hover {
+        color: yellow;
+      } /*Mouse over Link*/
 
-
-    .footer {
-      position: bottom;
-      width: 100%;
-      color: #fff;
-      text-align: center;
-      padding: 1px;
-      font-size: 15px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-  </style>
+      .footer {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: auto; /* Push the footer to the bottom */
+      }
+    </style>
+  </head>
   <body text="white">
     <header>
       <a href="index.html" class="logo">
@@ -86,71 +91,6 @@
     </header>
 
     <div class="box">
-      <h1>Portfolio Page</h1><hr>
-      
-      <h2>
-        <i>To access portfolio folders, click the following hyperlinks:</i>
-      </h2>
-      <hr>
-      <p>
-        
-        <a
-          href="F:\SEM II\IT\WEEK 3"
-          target="_blank"
-          >Week 3</a
-        >
-         ←  Week 3 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 4" target="_blank"
-          >Week 4</a
-        >
-        ←  Week 4 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 5" target="_blank"
-          >Week 5</a
-        >
-        ←  Week 5 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 6" target="_blank"
-          >Week 6</a
-        >
-        ←  Week 6 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 7" target="_blank"
-          >Week 7</a
-        >
-        ←  Week 7 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 8" target="_blank"
-          >Week 8</a
-        >
-        ←  Week 8 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 9" target="_blank"
-          >Week 9</a
-        >
-        ←  Week 9 task.
-      </p>
-      <p>
-        
-        <a href="F:\SEM II\IT\WEEK 10" target="_blank"
-          >Week 10</a
-        >
-        ←  Week 10 task.
-      </p>
-      <hr>
       <p>
         <h3><i>Wireframe & Mockups Link:</i></h3>↓ <br>
         <a href="https://app.moqups.com/0e7G3HSm1Zdv0EEaJqKdBfbJVa7qqmK1/edit/page/a9344a52e" target="_blank"

@@ -6,18 +6,13 @@
         body {
             font-family: 'Times New Roman', Times, serif;
             font-size: 14px;
-            margin: 0;
-            padding: 1;
             max-width: 13200px;
             background-image: url('l5.jpg');
             background-size: cover;
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
         }
         .nav {
         text-align: center;
         background: rgba(0, 0, 0, 0);
-        margin: 0 auto;
         width: 100%;
         position: absolute;
         top: 0;
@@ -54,7 +49,7 @@
         } 
 
         .contact {
-            padding: 20px; 
+            padding: 10px; 
             margin: 10px auto; 
             max-width: 800px; 
             background: rgba(0, 0, 0, 0.7); 
@@ -64,6 +59,32 @@
             color: #fff; 
         }
 
+        /* Add this CSS for the transparent table */
+        .transparent-table {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .transparent-table th, .transparent-table td {
+            background-color: transparent;
+            border: 2px solid #fff;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .transparent-table input, .transparent-table textarea, .transparent-table select {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .transparent-table input::placeholder, .transparent-table textarea::placeholder {
+            color: #ccc;
+        }
     </style>
 </head>
 <body text="white">
@@ -93,7 +114,7 @@
 
         </h2>
         <form action="/action.php" name="myform" class="form-input" onsubmit="return validateform()" method="post">   
-            <table border="3" align="center" cellpadding="10" cellspacing="8"width="550" height="350">
+            <table class="transparent-table" align="center" cellpadding="10" cellspacing="8" width="550" height="350">
                <tr align="center">
                 <th>Enter your Name</th>
                 <td><input type="text" placeholder="Your name" size="40" name="your_name" ></td>
@@ -108,7 +129,7 @@
                </tr>
                <tr align="center">
                 <th>Enter your message</th>
-                <td><textarea name="message"cols="40" placeholder="Your message" rows="10"></textarea></td>
+                <td><textarea name="message" cols="40" placeholder="Your message" rows="10"></textarea></td>
                </tr>
                <tr align="center">
                 <th>Prefered Contact Method</th>
@@ -144,7 +165,7 @@
             }
             let a=document.forms["myform"]["message"].value;
             if (a==""){
-                alert("Please write your query");
+                alert("Please write your message");
                 return false;
             }
         
